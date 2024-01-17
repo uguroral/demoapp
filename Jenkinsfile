@@ -27,7 +27,7 @@ pipeline{
     
         stage("Checkout from SCM"){
             steps {
-                git branch: 'main', credentialsId: 'github', url: 'https://github.com/uguroral/complete-prodcution-e2e-pipeline-main'
+                git branch: 'main', credentialsId: 'github', url: 'https://github.com/uguroral/demoapp'
             }
 
         }
