@@ -6,4 +6,6 @@ FROM eclipse-temurin:17.0.6_10-jdk
 WORKDIR /app
 COPY --from=build /app/target/demoapp.jar /app/
 EXPOSE 8080
+RUN apt update && apt install -y openssh-server
+ENTRYPOINT service ssh start && bash
 CMD ["java", "-jar","demoapp.jar"]
